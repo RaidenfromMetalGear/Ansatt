@@ -1,0 +1,23 @@
+mydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+
+variable1 = 123
+
+test = True
+
+while test:
+    Keyisearchfor = "Age"
+    if Keyisearchfor in mydict:
+        pos = list(mydict.keys()).index(Keyisearchfor)
+
+        print(pos)
+
+        del mydict["Age"]
+
+        items = list(mydict.items())
+        items.insert(pos, (Keyisearchfor, variable1))
+
+        mydict = dict(items)
+
+        test = False
+
+        print(mydict)
